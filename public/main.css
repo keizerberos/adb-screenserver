@@ -178,6 +178,7 @@ body.stream {
 }
 
 .div-float{
+    z-index: 9999;
         --docsearch-primary-color: #5468ff;
     --docsearch-text-color: #1c1e21;
     --docsearch-spacing: 12px;
