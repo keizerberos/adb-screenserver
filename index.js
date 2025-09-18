@@ -2472,7 +2472,8 @@ var Device = (function (_super) {
                         else {
                             return [2];
                         }
-                        return [2];
+                        // removed by dead control flow
+
                 }
             });
         });
@@ -3140,15 +3141,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.ARGS_STRING = exports.SERVER_PROCESS_NAME = exports.LOG_LEVEL = exports.SERVER_TYPE = exports.SERVER_VERSION = exports.SERVER_PORT = exports.SERVER_PACKAGE = void 0;
+exports.ARGS_STRING = exports.SERVER_PROCESS_NAME = exports.LOG_LEVEL = exports.VIDEO_ENCODER = exports.SERVER_TYPE = exports.SERVER_VERSION = exports.SERVER_PORT = exports.SERVER_PACKAGE = void 0;
 exports.SERVER_PACKAGE = 'com.genymobile.scrcpy.Server';
 exports.SERVER_PORT = 8886;
 exports.SERVER_VERSION = '1.19-ws6';
 exports.SERVER_TYPE = 'web';
-exports.LOG_LEVEL = 'ERROR';
+exports.VIDEO_ENCODER = 'video_encoder=OMX.google.h264.encoder';
+exports.LOG_LEVEL = 'INFO';
 var SCRCPY_LISTENS_ON_ALL_INTERFACES;
 SCRCPY_LISTENS_ON_ALL_INTERFACES = true;
-var ARGUMENTS = [exports.SERVER_VERSION, exports.SERVER_TYPE, exports.LOG_LEVEL, exports.SERVER_PORT, SCRCPY_LISTENS_ON_ALL_INTERFACES];
+var ARGUMENTS = [exports.SERVER_VERSION, exports.SERVER_TYPE, exports.LOG_LEVEL, exports.SERVER_PORT, SCRCPY_LISTENS_ON_ALL_INTERFACES, exports.VIDEO_ENCODER];
 exports.SERVER_PROCESS_NAME = 'app_process';
 exports.ARGS_STRING = "/ ".concat(exports.SERVER_PACKAGE, " ").concat(ARGUMENTS.join(' '), " 2>&1 > /dev/null");
 
@@ -4078,7 +4080,7 @@ module.exports = require("@dead50f7/adbkit/lib/adb/sync/entry");
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it uses a non-standard name for the exports (exports).
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 var exports = __webpack_exports__;
 

@@ -916,7 +916,7 @@ var Module = function () {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it uses a non-standard name for the exports (exports).
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 var exports = __webpack_exports__;
 
