@@ -456,6 +456,17 @@ body.stream {
     width: 24px;
     height: 24px;
 }
+
+.div-text-area {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+}
+
+.div-text-area textarea {   
+	 width: 100%;
+}
 .text-area {
     width: 100%;
     resize: vertical;
